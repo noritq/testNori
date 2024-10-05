@@ -93,7 +93,7 @@
              </div>
         </div>
         <div class="form__button">
-            <button class="form__button-submit">確認画面</button>
+            <button class="form__button-submit" type="submit">確認画面</button>
         </div>
     </form>
 </div>
