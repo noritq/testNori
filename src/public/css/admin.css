@@ -23,6 +23,7 @@
     margin-bottom: -30px;
 }
 .admin__content-form {
+    margin: 0 auto;
 
 }
 .admin__content-form__index {
@@ -58,24 +59,39 @@
 .admin__content-export {
     margin-top: 20px;
 }
-.admin__content-export button{
-    border:none;
-    padding:3px 10px;
-    color:#996633
-}
 .admin__content-list {
-    margin-top: 30px;
+    margin-top:30px;
 }
-.admin__content-list__detail{
-    background:#996633;
+.admin__content-table {
     width: 1000px;
+    text-align: left;
+    border-collapse: collapse;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
 
 }
-.admin__content-table__header {
-    color: #fff;
-    padding-left: 0 10px 30px;
-    text-align: center;
+
+.admin__content-table-header th {
+    background:#996633;
+    color: white;
+    padding:15px;
 }
-.admin__content-table__detail{
+.admin__content-table-data td {
+    color: #644525;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+.admin__conttent-logout {
     
+}
+.admin__conttent-logout-button {
+    position: absolute;
+        top: 30px;
+        left: 1200px;
+        background: #ddd;
+            border: gray;
+            color: gray;
+            border-radius: 3px;
+            padding: 5px 15px;
+            cursor: pointer;
 }

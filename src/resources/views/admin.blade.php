@@ -33,20 +33,30 @@
             <form action=""><button>エクスポート</button></form>
             </div>
             <div class="admin__content-list">
-                <table class="admin__content-list__detail">
-                    <tr class="admin__content-table__header">
+                <table class="admin__content-table">
+                    <tr class="admin__content-table-header">
                         <th>お名前</th>
                         <th>性別</th>
                         <th>メールアドレス</th>
-                        <th>お問い合わせの内容</th>
-                        <th></th>
+                        <th colspan="2">お問い合わせの種類</th>
                     </tr>
-                    <tr class="admin__content-table__detail">
-                        <td><input type="name" placeholder="山田太郎"></td>
+                    <tr class="admin__content-table-data">
+                        <td>山田</td>
+                        <td>男性</td>
+                        <td>test@example.com</td>
+                        <td>商品の交換について</td>
+                        <td>詳細</td>
                     </tr>
-
                 </table>
+                <div class="admin__content-logout">
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button class="admin__conttent-logout-button">logout</button>
+                    </form>
+                </div>
             </div>
+
+            
         </div>
     </div>
 </div>

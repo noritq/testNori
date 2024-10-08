@@ -15,6 +15,7 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
+            $table->integer('category_id');
             $table->string('first_name');
             $table->string('last_name');
             $table->tinyInteger('gender')->unsigned()->comment('性別 1:男性 2:女性 3:その他');
@@ -22,7 +23,7 @@ class CreateContactsTable extends Migration
             $table->string('tel', 11);
             $table->string('address');
             $table->string('building')->nullable();
-            $table->text('detail');
+            $table->text('content');
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

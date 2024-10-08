@@ -9,6 +9,9 @@ class Category extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'content'
+        'detail'
     ];
+    public function categories(){
+        return $this->hasMany('App\Models\Contact');
+    }
 }

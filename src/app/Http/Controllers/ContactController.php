@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
+use App\Models\Category;
 use App\Models\Contact;
 
 class ContactController extends Controller
 {
     public function index(){
         return view ('index');
+    }
+    public function admin(){
+        return view ('admin');
     }
     public function confirm(ContactRequest $request){
         
@@ -21,4 +25,16 @@ class ContactController extends Controller
         Contact::create($contact);
         return view('thanks');
     }
+    public function create(Request $request){
+        $this->validate($request, Contact::$rules);
+        $form = $request->all();
+        Book::create($form);
+        return redirect('/contact');
+    }
+
+    //public function index(){
+    //    $contacts = Contact::with('category')->get();
+    //    $categories = Category::all();
+    //    return view('admin', compact('contacts', 'categories'));
+    //}
 }
